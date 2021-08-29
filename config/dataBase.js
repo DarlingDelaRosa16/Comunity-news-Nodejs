@@ -4,7 +4,6 @@ require('dotenv').config();
 module.exports = ()=>{
     
     const connect = () => {
-        console.log(process.env.PORT, process.env.DB_URI)
         mongoose.connect('mongodb://localhost:27017/my_comunity_app',
         {
             keepAlive: true,
