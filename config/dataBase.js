@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
+require('dotenv').config();
 
 module.exports = ()=>{
-
+    
     const connect = () => {
-        
-        mongoose.connect(
-        process.env.DB_URI,
+        console.log(process.env.PORT, process.env.DB_URI)
+        mongoose.connect('mongodb://localhost:27017/my_comunity_app',
         {
             keepAlive: true,
             useNewUrlParser: true,
