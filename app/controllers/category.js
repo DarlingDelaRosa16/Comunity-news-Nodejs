@@ -2,7 +2,7 @@ const model = require('../models/category')
 
 exports.getDataofApp = (req, res)=>{
     res.send({
-        data: "__dirname + category, comunity, news, user"
+        data: "The aplication is working "
     })
 }
 exports.getDataCategory = (req, res) => {
