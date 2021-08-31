@@ -16,6 +16,9 @@ const comunityRouter = require('./app/routes/comunity')
 const userRouter = require('./app/routes/user');
 const router = require('./app/routes/news');
 
+
+app.use(favicon(__dirname + '/app/img/node_icon.png'));
+
 app.use(express.json({limit: '20mb'}))
 app.use(express.urlencoded({limit: '20mb', extended: true}))
 
@@ -23,10 +26,8 @@ app.use(newsRouter)
 app.use(categoryRouter)
 app.use(comunityRouter)
 app.use(userRouter)
-app.use(favicon(__dirname + '/app/img/node_icon.png'));
-router.get('/', (req, res)=>{ res.send({data: "Comunity-news-Nodejs"})})
 
 app.listen(process.env.PORT, () =>{
-    console.log("The aplication is working")
+    console.log( "The aplication is working" )
 })
 initDB()

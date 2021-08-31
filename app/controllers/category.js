@@ -1,5 +1,10 @@
 const model = require('../models/category')
 
+exports.getDataofApp = (req, res)=>{
+    res.send({
+        data: "__dirname + category, comunity, news, user"
+    })
+}
 exports.getDataCategory = (req, res) => {
     model.find({}, (err, docs) => {
         res.send({

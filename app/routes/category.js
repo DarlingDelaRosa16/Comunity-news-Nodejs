@@ -5,6 +5,11 @@ const router = express.Router()
 ////////////////Routes////////////////
 
 router.get(
+    '/',
+    constroller.getDataofApp
+)
+
+router.get(
     '/category',
     constroller.getDataCategory
 )
