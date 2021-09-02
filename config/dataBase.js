@@ -5,7 +5,7 @@ module.exports = ()=>{
     const connect = () => {
         
         mongoose.connect(
-        process.env.DB_URI,
+        process.env.DB_URL,
         {
             keepAlive: true,
             useNewUrlParser: true,
