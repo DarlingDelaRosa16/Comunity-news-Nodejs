@@ -5,7 +5,7 @@ module.exports = ()=>{
     const connect = () => {
         
         mongoose.connect(
-        process.env.DB_URL,
+        process.env.DB_MONGO_ATLAS,
         {
             keepAlive: true,
             useNewUrlParser: true,
@@ -13,13 +13,12 @@ module.exports = ()=>{
         },
         (err)=>{
             if (err) {
-                console.log("Error in Data Base !!")
+                console.log("Error in Data Base !! " + err)
             }else{
                 console.log("The DB is conected !!")
             }
         }
         )
     }
-
     connect();
 }
