@@ -7,7 +7,7 @@ exports.getDataUser = async (req, res) => {
         password: data.password
     })
     if(!user){res.send("Error in User")}
-    else{ res.send({user})}
+    else{ res.send({items : user})}
 }
 
 
