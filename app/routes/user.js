@@ -4,7 +4,7 @@ const router = express.Router()
 
 ////////////////Routes////////////////
 
-router.post(
+router.get(
     '/checkUser',
     constroller.getDataUser
 )

@@ -1,18 +1,15 @@
 const model = require('../models/user')
 
-exports.getDataUser = (req, res) => {
+exports.getDataUser = async (req, res) => {
     const data = req.body
-    model.findOne({
+    const user = await model.findOne({
         userName: data.userName,
         password: data.password
-    }, (err, docs) => {
-        if (err) {
-            res.status(422.).send(err)
-        } else {
-            res.send({ items : docs})
-        }
     })
+    if(!user){res.send("Error in User")}
+    else{ res.send({user})}
 }
+
 
 exports.insertDataUser = (req, res) => {
     const data = req.body
