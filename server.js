@@ -5,6 +5,7 @@ const favicon = require("serve-favicon")
 const express = require('express')
 const initDB = require('./config/dataBase')
 const app = express()
+app.use(cors({ origin: 'https://comunity-app.netlify.app'}))
 const mongoose = require('mongoose')
 
 mongoose.set('useNewUrlParser', true);
@@ -27,7 +28,6 @@ app.use(newsRouter)
 app.use(categoryRouter)
 app.use(comunityRouter)
 app.use(userRouter)
-app.use(cors())
 
 app.listen(process.env.PORT, () =>{
     console.log( "The aplication is working" )

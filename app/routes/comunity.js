@@ -14,7 +14,6 @@ router.get(
     constroller.getDataComunity
 )
 
-
 router.post(
     '/comunity',
     constroller.insertDataComunity
