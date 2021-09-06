@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors')
 
 const favicon = require("serve-favicon")
 const express = require('express')
@@ -26,6 +27,7 @@ app.use(newsRouter)
 app.use(categoryRouter)
 app.use(comunityRouter)
 app.use(userRouter)
+app.use(cors())
 
 app.listen(process.env.PORT, () =>{
     console.log( "The aplication is working" )
